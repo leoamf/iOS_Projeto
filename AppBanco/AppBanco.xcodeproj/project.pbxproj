@@ -111,9 +111,8 @@
 				575D01D120A7612A00D22F58 /* Controllers */,
 				575D01D020A760DB00D22F58 /* Suport */,
 				575D01A620A760D100D22F58 /* Main.storyboard */,
-				575D01A920A760D100D22F58 /* Assets.xcassets */,
-				575D01AB20A760D100D22F58 /* LaunchScreen.storyboard */,
 				575D01AE20A760D100D22F58 /* Info.plist */,
+				575D01A920A760D100D22F58 /* Assets.xcassets */,
 			);
 			path = AppBanco;
 			sourceTree = "<group>";
@@ -139,6 +138,7 @@
 		575D01D020A760DB00D22F58 /* Suport */ = {
 			isa = PBXGroup;
 			children = (
+				575D01AB20A760D100D22F58 /* LaunchScreen.storyboard */,
 				575D01A220A760D100D22F58 /* AppDelegate.swift */,
 			);
 			path = Suport;

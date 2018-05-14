@@ -13,7 +13,7 @@ class Cliente{
     var password : String? = nil
     var contaCorrente : ContaCorrente? = nil
     
-    static var singleton : Cliente?
+   private static var singleton : Cliente?
     
     static var instance: Cliente {
         get{

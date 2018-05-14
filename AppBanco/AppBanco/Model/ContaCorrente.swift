@@ -25,14 +25,13 @@ class ContaCorrente{
             return total
         }
     }
-    var total : Int
+    var totalRegistros : Int
     {
         get
         {
             return  transacoes!.count
         }
     }
-     
     
     func debitar(valor : Float)  {
         let transacao = Transacao(tipoTransacao: TipoTransacao.Debito, valor: valor)
