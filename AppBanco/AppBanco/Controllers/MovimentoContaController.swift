@@ -15,8 +15,7 @@ class MovimentoContaController: UIViewController {
     
     @IBAction func btSalvar(_ sender: Any) {
         
-         let valor = (textValor.text! as NSString).floatValue
-        
+        let valor = (textValor.text! as NSString).floatValue        
         if valor == 0 {
             let alert = UIAlertController(title: "Valor inválido!", message: "Informe um valor válido!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
