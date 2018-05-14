@@ -15,13 +15,19 @@ class  Transacao{
     
     var tipoTransacao : TipoTransacao = .Credito
     var valor : Float = 0
+    var valorFormatado : String {
+        get
+        {
+            return String(format: "R$ %.2f",self.valor )
+        }
+    }
     var data : Date = Date()
     var dataFormatada : String {
         get
         {
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyyy"
-            return formatter.string(from: data)
+            return formatter.string(from: self.data)
         }
     }
     

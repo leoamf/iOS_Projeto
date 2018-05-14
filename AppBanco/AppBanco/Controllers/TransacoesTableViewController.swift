@@ -30,26 +30,21 @@ class TransacoesTableViewController: UITableViewController {
  
 
         if indexPath.row >= (Cliente.instance.contaCorrente?.totalRegistros)! {
-            let valor = Cliente.instance.contaCorrente?.saldo
-            let valorFormatado = String(format: "R$ %.2f",valor ?? 0)
             cell.textLabel?.text = "Saldo"
-            cell.detailTextLabel?.text = valorFormatado
+            cell.detailTextLabel?.text =  Cliente.instance.contaCorrente?.saldoFormatado
             cell.imageView?.image = nil
             cell.textLabel?.textColor = UIColor.blue
             cell.detailTextLabel?.textColor = UIColor.blue
         }else{
             let transacao =  Cliente.instance.contaCorrente?.transacoes![indexPath.row]
-            let valor = transacao?.valor
-            let valorFormatado = String(format: "R$ %.2f",valor ?? 0)
             let dataFormatada = (transacao?.dataFormatada ?? "")
+            cell.detailTextLabel?.text = transacao?.valorFormatado
             if transacao?.tipoTransacao == TipoTransacao.Credito {
                 cell.textLabel?.text =  "\(dataFormatada)(C)"
-                cell.detailTextLabel?.text = valorFormatado
                 cell.textLabel?.textColor = UIColor.green
                 cell.detailTextLabel?.textColor = UIColor.green
              }else{
                 cell.textLabel?.text =  "\(dataFormatada)(D)"
-                cell.detailTextLabel?.text = valorFormatado
                 cell.textLabel?.textColor = UIColor.red
                 cell.detailTextLabel?.textColor = UIColor.red
              }
@@ -57,7 +52,6 @@ class TransacoesTableViewController: UITableViewController {
         
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(red: 244/255.0, green: 244/255.0, blue: 244/255.0, alpha: 1)
-         
         }
         
         return cell

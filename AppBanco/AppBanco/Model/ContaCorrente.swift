@@ -25,6 +25,13 @@ class ContaCorrente{
             return total
         }
     }
+    var saldoFormatado : String {
+        get
+        {
+          return String(format: "R$ %.2f",self.saldo)
+        }
+    }
+    
     var totalRegistros : Int
     {
         get
